@@ -20,21 +20,95 @@ body {
   margin: 0 auto;
 }
 /* common css end */
-#nav {
-}
 #nav .navbox {
+  padding: 56px 0 30px;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
+  border-bottom: 2px solid rgba(85, 85, 87, 0.6);
 }
-#nav .navbox .navbtn button {
+#nav .navbox .navbtn .btn {
   color: #fff;
+  margin-right: 23px;
   font-size: 24px;
   font-weight: 400;
   line-height: 140%;
   letter-spacing: -0.48px;
   background-color: transparent;
   border: none;
+  text-transform: capitalize;
+  position: relative;
+}
+#nav .navbox .navbtn .btn img {
+  position: absolute;
+  top: 0;
+  right: -40px;
 }
 /* nav start */
 /* nav end */
+/* banner start */
+#banner {
+  padding: 132px 0 189px;
+}
+#banner .bnrbox h1 {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 141.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 110px;
+  font-weight: 700;
+  letter-spacing: -5.5px;
+  max-width: 834px;
+}
+#banner .bnrbox .box {
+  height: 444px;
+  background-color: #aea9b0;
+  margin-top: 70px;
+  position: relative;
+}
+#banner .bnrbox .box .mailbox {
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #ddff55;
+  display: grid;
+  place-items: center;
+  border: 6px solid #121316;
+  position: absolute;
+  top: -16%;
+  right: 39px;
+}
+/* banner end */
+/* mix start */
+#mix {
+  padding: 88px 0 161px;
+}
+#mix .title {
+  padding: 0 79px;
+  text-align: center;
+}
+#mix .title p {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.64px;
+}
+#mix .mixbox {
+  margin-top: 148px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: " . about service";
+}
+#mix .mixbox .about {
+  grid-area: about;
+}
+#mix .mixbox .service {
+  grid-area: service;
+}
+/* mix end */
