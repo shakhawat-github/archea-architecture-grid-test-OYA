@@ -1,0 +1,40 @@
+/* common css start */
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+body {
+  background-color: #121316;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+/* common css end */
+#nav {
+}
+#nav .navbox {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+#nav .navbox .navbtn button {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.48px;
+  background-color: transparent;
+  border: none;
+}
+/* nav start */
+/* nav end */
