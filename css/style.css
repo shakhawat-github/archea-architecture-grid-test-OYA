@@ -86,6 +86,16 @@ body {
 /* mix start */
 #mix {
   padding: 88px 0 161px;
+  position: relative;
+  overflow: hidden;
+}
+#mix .mixshap {
+  position: absolute;
+  top: -0%;
+  left: 0;
+  width: calc(50% - 12px);
+  z-index: -1;
+  height: 95%;
 }
 #mix .title {
   padding: 0 79px;
@@ -246,22 +256,22 @@ body {
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -1px;
-  opacity: .6;
+  opacity: 0.6;
   max-width: 482px;
   margin: 0 auto;
 }
-#awards .awardbar{
+#awards .awardbar {
   display: flex;
   justify-content: space-between;
   margin-top: 56px;
   padding-bottom: 24px;
-  border-bottom: 1px solid rgba(113, 113, 115, 0.70);
+  border-bottom: 1px solid rgba(113, 113, 115, 0.7);
 }
-#awards .awardbar .item{
+#awards .awardbar .item {
   display: flex;
   column-gap: 16px;
 }
-#awards .awardbar .item button{
+#awards .awardbar .item button {
   border: none;
   color: #ffffff;
   padding: 12px 24px;
@@ -279,7 +289,7 @@ body {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
 }
-#awards .awardbar .allaward button{
+#awards .awardbar .allaward button {
   opacity: 1;
 }
 #awards .awardbar .item button:hover,
@@ -287,14 +297,285 @@ body {
   background-color: #555557;
   opacity: 1;
 }
-#awards .awardlist{
+#awards .awardlist {
   margin-top: 36px;
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(385px , 1fr));
-  grid-auto-rows: 66px;
+  grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+  grid-template-rows: repeat(12, 44px);
+  gap: 24px;
 }
-#awards .awardlist .one{
-  grid-row-end: span 4;
+#awards .awardlist .one {
+  grid-row-end: span 5;
+  background: linear-gradient(180deg, #3c3f49 0%, rgba(60, 63, 73, 0) 100%);
+  padding-left: 25px;
+  position: relative;
+}
+#awards .awardlist .two {
+  grid-row-end: span 8;
+  grid-column-end: span 2;
+  background-color: #5e666f;
+}
+#awards .awardlist .three {
+  grid-row-end: span 8;
   background-color: #485518;
 }
+#awards .awardlist .four {
+  grid-row-end: span 5;
+  position: relative;
+  background-color: #485518;
+}
+#awards .awardlist .five {
+  grid-row-end: span 5;
+  padding: 24px;
+  background-color: #282f0e;
+}
+#awards .awardlist .one h4 {
+  color: #fff;
+  text-transform: capitalize;
+  margin-top: 24px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -1.4px;
+}
+
+#awards .awardlist .one h2 {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -2.24px;
+}
+#awards .awardlist .one .country {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 15px;
+}
+#awards .awardlist .one .country a {
+  color: #b1b2b6;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.8px;
+  text-transform: capitalize;
+}
+#awards .awardlist .one img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.3;
+}
+#awards .awardlist .four .overlay {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(18, 19, 22, 0.4);
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+#awards .awardlist .four .overlay a {
+  color: #121316;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  border-radius: 50px;
+  background: #fff;
+  padding: 12px 24px;
+  text-transform: capitalize;
+}
+#awards .awardlist .four:hover .overlay {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+#awards .awardlist .five h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -1.28px;
+}
+#awards .awardlist .five .nav {
+  padding: 12px 0 16px;
+  border-bottom: 1px solid rgba(181, 186, 163, 0.4);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  column-gap: 16px;
+}
+#awards .awardlist .five .nav button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.64px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.6;
+  position: relative;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+#awards .awardlist .five .nav button::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+#awards .awardlist .five .nav button:hover {
+  opacity: 1;
+}
+#awards .awardlist .five .nav button:hover::after {
+  width: 100%;
+}
+#awards .awardlist .five .nav button.active {
+  opacity: 1;
+}
+#awards .awardlist .five .nav button.active::after {
+  width: 100%;
+}
+#awards .awardlist .five .navitem {
+  background-color: transparent;
+}
+#awards .awardlist .five .navitem .item p {
+  color: #b0b1b5;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 165%;
+  letter-spacing: -0.64px;
+  margin-top: 19px;
+  max-width: 336px;
+}
+#awards .awardlist .five .navitem .item p a {
+  color: #fff;
+}
 /* awards end */
+/* footer start */
+#foot {
+  padding-top: 100px;
+}
+#foot .footbox {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: "mail mail mail card card";
+}
+#foot .footbox .mail {
+  grid-area: mail;
+}
+#foot .footbox .mail .title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -1.2px;
+}
+#foot .footbox .mail form {
+  max-width: 662px;
+}
+#foot .footbox .mail form label {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+#foot .footbox .mail form input,
+#foot .footbox .mail form input::placeholder {
+  color: #40444f;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -2.16px;
+  background-color: transparent;
+  border: none;
+  padding-left: 5px;
+  width: 100%;
+}
+#foot .footbox .mail form button {
+  background-color: #40444f;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#foot .footbox .mail .footsocial {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 34px;
+}
+#foot .footbox .mail .footsocial li a {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: rgba(64, 68, 79, 0.4);
+}
+#foot .footbox .card {
+  grid-area: card;
+  width: 448px;
+  height: 407px;
+  background-color: #5e4e4e;
+  margin-left: auto;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+}
+#foot .footbox .card .name {
+  display: flex;
+  column-gap: 62px;
+  padding-bottom: 20px;
+}
+#foot .footbox .card .name a {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -1.4px;
+  text-decoration-line: underline;
+}
+#foot .copyright {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 32px 0 43px;
+  justify-content: space-between;
+}
+#foot .copyright p , #foot .copyright a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 175%;
+  letter-spacing: -0.56px;
+}
+
+/* footer end */
